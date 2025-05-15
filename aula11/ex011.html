@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>Conferindo a nacionalidade</h1>
+    Informe o seu país de origem: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="conferir()">
+    <div id="res">
+
+    </div>
+    <script> 
+        function conferir() {
+            var txtp = window.document.getElementById('txtpais')
+            var pais = txtp.value;
+            var res = window.document.querySelector('div#res') //testando uso do querySelector
+            res.innerHTML = `O seu país é ${pais}.`
+            if (pais.toLowerCase() == 'brasil') {
+                res.innerHTML += `<p>Você é brasileiro!</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
